@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Phisherman",
+    "version": "1.0",
+    "description": "Checks the safety of a website while hovering the link",
+    "permissions": ["activeTab"],
+    "host_permissions": ["http://127.0.0.1:5000/*", 
+        "http://localhost/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "css": ["tooltip.css"],
+            "all_frames": true
+        }
+    ],
+    "icons": {
+
+    }
+}
